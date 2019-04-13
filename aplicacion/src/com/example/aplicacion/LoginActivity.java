@@ -8,6 +8,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 import org.json.JSONArray;
 
+import android.R.array;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,72 +35,37 @@ public class LoginActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-
-
-				Thread tr = new Thread() {
+				new Thread(new Runnable() {
+					
 					@Override
 					public void run() {
-						final String res =EnviarPost(login.getText().toString(),pass.getText().toString());
-						runOnUiThread(new Runnable() {
-							
-							@Override
-							public void run() {
-								int r=obJSON(res);
+						
+						String response = HttpRequest.get("http://"+cambiarIP.ip+"/Validar/validar.php?id="+login.getText().toString()+"&pass="+pass.getText().toString()).body();
+						try {
+							JSONArray objecto = new JSONArray(response);
 								
-								if (r>0) {
-									Intent i = new Intent(getApplicationContext(), MenuActivity.class);
-									startActivity(i);
+								if(objecto.length()>0) {
+									Intent e = new Intent(getApplicationContext(), MenuActivity.class);
+									startActivity(e);
 								}else {
 									Toast.makeText(getApplicationContext(), "usuario o contraseña incorrecta", Toast.LENGTH_SHORT).show();
 								}
+							
+							}catch (Exception e) {
+								// TODO: handle exception
+								e.printStackTrace();
+								}
+							
 								
-							}
-						});
+							
+							
 					}
-				};
-				tr.start();
+				}).start();
+				
 			}
-		});
- 		
+ 		});
 	}
-	public String EnviarPost (String usuario , String contraseña) {
-		String guardar="id="+usuario+"&pass="+contraseña;
-		HttpsURLConnection conectar = null;
-		String respuesta="";
 		
-		try {
-			URL url = new URL("192.168.0.17/validar/validar.php");
-			conectar=(HttpsURLConnection)url.openConnection();
-			conectar.setRequestMethod("POST");
-			conectar.setRequestProperty("Content-Lenght",""+Integer.toString(guardar.getBytes().length));
-			
-			conectar.setDoOutput(true);
-			DataOutputStream datico = new DataOutputStream(conectar.getOutputStream());
-			datico.writeBytes(guardar);
-			datico.close();
-			
-			Scanner consumido = new Scanner(conectar.getInputStream());
-			
-			while(consumido.hasNextLine()) {
-				respuesta+=(consumido.nextLine());
-			}
-			
-		} catch (Exception e) {}
-		
-			return respuesta.toString();
-		
+	
 	}
-	public int obJSON (String respta) {
-		int res=0;
-		try {
-			JSONArray json = new JSONArray(respta);
-			if(json.length()>0) {
-				res=1;
-			}
-			
-			
-		} catch (Exception e) {}
-			return res;	
-		
-	}
-}
+
