@@ -1,12 +1,15 @@
 package com.example.aplicacion;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -47,5 +50,84 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void Que (View v){
+		
+		AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);  
+		dialogo1.setTitle("Que es ?"); 
+		
+		dialogo1.setMessage("¿ ---- ?");
+		dialogo1.setCancelable(false); 
+		dialogo1.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int i) {
+				
+				
+			}
+		});
+		dialogo1.setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				Toast.makeText(MainActivity.this ,"adiós",Toast.LENGTH_SHORT).show();
+				
+			}
+		});
+		dialogo1.create().show();
+	}
+	
+	public void funciona(View v) {
+		
+		AlertDialog.Builder dialogo2 = new AlertDialog.Builder(this);  
+		dialogo2.setTitle("Para que funciona ?"); 
+		
+		dialogo2.setMessage("¿ ---- ?");
+		dialogo2.setCancelable(false); 
+		dialogo2.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int i) {
+				
+				
+			}
+		});
+		dialogo2.setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				Toast.makeText(MainActivity.this ,"adiós",Toast.LENGTH_SHORT).show();
+				
+			}
+		});
+		dialogo2.create().show();
+		
+	}
+	
+	public void equipo(View v) {
+		
+		AlertDialog.Builder dialogo3 = new AlertDialog.Builder(this);  
+		dialogo3.setTitle("Nuestro equipo desarrollador ?"); 
+		
+		dialogo3.setMessage("¿ ---- ?");
+		dialogo3.setCancelable(false); 
+		dialogo3.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int i) {
+				
+				
+			}
+		});
+		dialogo3.setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				Toast.makeText(MainActivity.this ,"adiós",Toast.LENGTH_SHORT).show();
+				
+			}
+		});
+		dialogo3.create().show();
 	}
 }

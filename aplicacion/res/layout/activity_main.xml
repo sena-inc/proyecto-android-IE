@@ -8,19 +8,44 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.aplicacion.MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
+    <Button
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_above="@+id/button2"
+        android:layout_alignLeft="@+id/button2"
+        android:onClick="funciona"
+        android:text="Para que funciona ?"
+        android:width="150dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button3"
+        android:layout_alignLeft="@+id/button3"
+        android:onClick="Que"
+        android:text="Que es ?"
+        android:width="150dp" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/textView1"
-        android:layout_marginRight="64dp"
-        android:text="Login" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49dp"
+        android:text="iniciar sesion" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_marginBottom="36dp"
+        android:onClick="equipo"
+        android:text="nuestro Equipo desarrollador"
+        android:width="150dp" />
 
 </RelativeLayout>
