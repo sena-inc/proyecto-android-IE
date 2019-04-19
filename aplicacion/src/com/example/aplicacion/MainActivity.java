@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,16 +14,20 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-
+	
+	
 	Button oprimir;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+	
+		
+		
 		oprimir = (Button)findViewById(R.id.button1);
 		
 		oprimir.setOnClickListener(new View.OnClickListener() {
+			
 			
 			@Override
 			public void onClick(View v) {
@@ -53,10 +59,13 @@ public class MainActivity extends Activity {
 	}
 	
 	public void Que (View v){
+		LayoutInflater imagenque = LayoutInflater.from(MainActivity.this);
+		final View  imagen1 = imagenque.inflate(R.layout.que, null);
 		
-		AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);  
-		dialogo1.setTitle("Que es ?"); 
+		AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this); 
 		
+		dialogo1.setTitle("Que es ?");
+		dialogo1.setView(imagen1);
 		dialogo1.setMessage("¿ ---- ?");
 		dialogo1.setCancelable(false); 
 		dialogo1.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
@@ -71,7 +80,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				Toast.makeText(MainActivity.this ,"adiós",Toast.LENGTH_SHORT).show();
+				dialog.cancel();
 				
 			}
 		});
@@ -97,10 +106,11 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				Toast.makeText(MainActivity.this ,"adiós",Toast.LENGTH_SHORT).show();
+				dialog.cancel();
 				
 			}
 		});
+		
 		dialogo2.create().show();
 		
 	}
@@ -124,7 +134,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				Toast.makeText(MainActivity.this ,"adiós",Toast.LENGTH_SHORT).show();
+				dialog.cancel();
 				
 			}
 		});

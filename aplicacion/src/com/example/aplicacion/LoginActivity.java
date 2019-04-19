@@ -47,7 +47,7 @@ public class LoginActivity extends Activity {
 								if(objecto.length()>0) {
 									Intent e = new Intent(getApplicationContext(), MenuActivity.class);
 									startActivity(e);
-								}else {
+								}else{
 									Toast.makeText(getApplicationContext(), "usuario o contraseña incorrecta", Toast.LENGTH_SHORT).show();
 								}
 							
