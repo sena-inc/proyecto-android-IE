@@ -59,14 +59,13 @@ public class MainActivity extends Activity {
 	}
 	
 	public void Que (View v){
-		LayoutInflater imagenque = LayoutInflater.from(MainActivity.this);
-		final View  imagen1 = imagenque.inflate(R.layout.que, null);
+		
 		
 		AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this); 
 		
 		dialogo1.setTitle("Que es ?");
-		dialogo1.setView(imagen1);
-		dialogo1.setMessage("¿ ---- ?");
+		
+		dialogo1.setMessage("¿ AGREGAR TEXTO AQUI ?");
 		dialogo1.setCancelable(false); 
 		dialogo1.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
 			
@@ -92,7 +91,7 @@ public class MainActivity extends Activity {
 		AlertDialog.Builder dialogo2 = new AlertDialog.Builder(this);  
 		dialogo2.setTitle("Para que funciona ?"); 
 		
-		dialogo2.setMessage("¿ ---- ?");
+		dialogo2.setMessage("¿ AGREGAR TEXTO AQUI ?");
 		dialogo2.setCancelable(false); 
 		dialogo2.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
 			
@@ -120,7 +119,7 @@ public class MainActivity extends Activity {
 		AlertDialog.Builder dialogo3 = new AlertDialog.Builder(this);  
 		dialogo3.setTitle("Nuestro equipo desarrollador ?"); 
 		
-		dialogo3.setMessage("¿ ---- ?");
+		dialogo3.setMessage("¿ AGREGAR TEXTO AQUI ?");
 		dialogo3.setCancelable(false); 
 		dialogo3.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
 			
