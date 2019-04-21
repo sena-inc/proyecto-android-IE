@@ -65,7 +65,7 @@ public class MainActivity extends Activity {
 		
 		dialogo1.setTitle("Que es ?");
 		
-		dialogo1.setMessage("¿ AGREGAR TEXTO AQUI ?");
+		dialogo1.setMessage("Entorno inteligente es una aplicacion para el manejo de un ambiente domotico simulado, Permitiendo en sí el dominio, observación y seguridad, brindando una mejor comodidad en el entorno simulado.");
 		dialogo1.setCancelable(false); 
 		dialogo1.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
 			
@@ -91,7 +91,7 @@ public class MainActivity extends Activity {
 		AlertDialog.Builder dialogo2 = new AlertDialog.Builder(this);  
 		dialogo2.setTitle("Para que funciona ?"); 
 		
-		dialogo2.setMessage("¿ AGREGAR TEXTO AQUI ?");
+		dialogo2.setMessage("Es software que tiene como objetivo manipular los componentes implementados en un ambiente simulado, solucionando problemas como la climatización, el ahorro de energía, etc.");
 		dialogo2.setCancelable(false); 
 		dialogo2.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
 			
@@ -119,7 +119,7 @@ public class MainActivity extends Activity {
 		AlertDialog.Builder dialogo3 = new AlertDialog.Builder(this);  
 		dialogo3.setTitle("Nuestro equipo desarrollador ?"); 
 		
-		dialogo3.setMessage("¿ AGREGAR TEXTO AQUI ?");
+		dialogo3.setMessage("Jhonatan fernandez - Erik herrera - Santiago castro");
 		dialogo3.setCancelable(false); 
 		dialogo3.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
 			
