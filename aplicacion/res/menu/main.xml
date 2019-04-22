@@ -3,9 +3,10 @@
     tools:context="com.example.aplicacion.MainActivity" >
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/atras"
         android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
-
+        android:showAsAction="ifRoom"
+        android:title="@string/salir">
+ 	
+</item>
 </menu>

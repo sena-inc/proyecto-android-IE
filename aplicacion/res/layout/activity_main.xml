@@ -6,46 +6,67 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.aplicacion.MainActivity" >
+    tools:context="com.example.aplicacion.MainActivity" 
+    android:background="@drawable/celeste">
+
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1.29"
+            android:src="@drawable/bienvenido" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/login"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
         android:onClick="funciona"
         android:text="Para que funciona ?"
         android:width="150dp" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:layout_above="@+id/button3"
-        android:layout_alignLeft="@+id/button3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:onClick="Que"
         android:text="Que es ?"
         android:width="150dp" />
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="49dp"
-        android:text="iniciar sesion" />
-
-    <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_marginBottom="36dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/login"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button3"
         android:onClick="equipo"
         android:text="nuestro Equipo desarrollador"
         android:width="150dp" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/button4"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button2"
+        android:layout_weight="1.29"
+        android:text="iniciar sesion" />
+
+    <Button
+        android:id="@+id/registro"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/login"
+        android:text="registrar" />
 
 </RelativeLayout>

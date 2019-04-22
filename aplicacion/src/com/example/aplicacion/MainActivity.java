@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 	
 	
-	Button oprimir;
+	Button login,registro;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,9 +24,9 @@ public class MainActivity extends Activity {
 	
 		
 		
-		oprimir = (Button)findViewById(R.id.button1);
+		login = (Button)findViewById(R.id.login);
 		
-		oprimir.setOnClickListener(new View.OnClickListener() {
+		login.setOnClickListener(new View.OnClickListener() {
 			
 			
 			@Override
@@ -37,6 +37,22 @@ public class MainActivity extends Activity {
 				startActivity(i);
 			}
 		});
+		
+		registro = (Button)findViewById(R.id.registro);
+		
+		registro.setOnClickListener(new View.OnClickListener() {
+			
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				Intent e = new Intent(MainActivity.this, RegistroActivity.class);
+				startActivity(e);
+			}
+		});
+		
+		
 	}
 
 	@Override
@@ -52,7 +68,9 @@ public class MainActivity extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		if (id == R.id.atras) {
+			
+			finish();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

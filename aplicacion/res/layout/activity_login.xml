@@ -2,39 +2,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="${relativePackage}.${activityClass}" >
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="71dp"
-        android:ems="10"
-        android:hint="ingrese correo"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:ems="10"
-        android:hint="intrege contraseña"
-        android:inputType="textPassword" >
-
-        <requestFocus />
-    </EditText>
+    tools:context="${relativePackage}.${activityClass}"
+    android:background="@drawable/celeste" >
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="123dp"
+        android:text="iniciar sesion" />
+
+    <EditText
+        android:id="@+id/ID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="iniciar sesion" />
+        android:ems="10"
+        android:hint="intrege contraseña"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:hint="ingrese correo"
+        android:inputType="textEmailAddress" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/admin" />
 
 </RelativeLayout>

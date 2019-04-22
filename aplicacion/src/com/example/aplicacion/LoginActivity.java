@@ -26,10 +26,10 @@ public class LoginActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-		login = (EditText)findViewById(R.id.editText1);
- 		pass = (EditText)findViewById(R.id.editText2);
+		login = (EditText)findViewById(R.id.estado);
+ 		pass = (EditText)findViewById(R.id.ID);
  		
- 		validar = (Button)findViewById(R.id.button1);
+ 		validar = (Button)findViewById(R.id.login);
  		
  		validar.setOnClickListener(new View.OnClickListener() {
 			
